@@ -17,7 +17,7 @@ public class ThreeDSVerificationPage {
     @FindBy(className = "text-xs-center primary--text")
     private WebElement threeDSText;
 
-    @FindBy(css = "button[type='submit']")
+    @FindBy(css = "div.btn__content")
     private WebElement verifyButton;
 
     public boolean verifyThreeDSPage() {

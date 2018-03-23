@@ -1,10 +1,7 @@
 package endtoend;
 
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import pages.CerseiRegisterPage;
 import pages.CheckoutPage;
 import pages.ThreeDSVerificationPage;
@@ -22,17 +19,19 @@ public class AddCardSuccessHappyPathTest {
     String browser = "chrome";
 
     @BeforeSuite
-
     public void setup(){
 
         driver= utilities.DriverProvider.initialize(browser);
-        driver.get("https://cersei.apps.stl.pcfstage00.mastercard.int/register");
         cp = new CerseiRegisterPage(driver);
         c=  new CheckoutPage(driver);
         tp= new ThreeDSVerificationPage(driver);
 
     }
 
+    @BeforeTest
+    public void launchApp(){
+        driver.get("https://cersei.apps.stl.pcfstage00.mastercard.int/register");
+    }
 
     @Test
     public void addCardEndToEndFlow1()
