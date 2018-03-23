@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+    <test name="AddCardSuccessfully">
+        <packages>
+            <package name="endtoend"/>
+        </packages>
+    </test>
+    <!--<test name="GivenExampleTest2">-->
+        <!--<parameter name="cardNum" value="5413850000000123"/>-->
+        <!--<parameter name="cardMonth" value="11"/>-->
+        <!--<parameter name="cardYear" value="18"/>-->
+        <!--<packages>-->
+            <!--<package name="endtoend"/>-->
+        <!--</packages>-->
+    <!--</test>-->
+</suite> <!-- Suite -->
